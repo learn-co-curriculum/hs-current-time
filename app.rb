@@ -6,9 +6,4 @@ class App < Sinatra::Base
 		erb :index
 	end
 
-	get '/current_time' do
-		@readable_time = Time.now.strftime("%l:%M%p")
-		erb :current_time
-	end
-
 end
