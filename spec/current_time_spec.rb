@@ -8,7 +8,7 @@ describe "App" do
     end
 
     it "renders a status code of 200" do
-      expect(last_response).to eq(200) 
+      expect(last_response.status).to eq(200) 
     end
 
     it "has a view called 'current_time.erb'" do
