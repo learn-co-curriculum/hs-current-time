@@ -8,7 +8,7 @@ describe "App" do
     end
 
     it "renders a status code of 200" do
-      expect(last_response).to be_ok 
+      expect(last_response).to eq(200) 
     end
 
     it "has a view called 'current_time.erb'" do
@@ -16,7 +16,11 @@ describe "App" do
     end
 
     it "has the current time" do 
-      expect(last_response.body).to include(@current_time.strftime("%l:%M"))
+      if last_response.status == 200
+        expect(last_response.body).to include(@current_time.strftime("%l:%M"))
+      else
+        fail "Your app isn't responding to GET /current_time. Did you create that route?"
+      end
     end
 
     it "displays the time using ERB" do
