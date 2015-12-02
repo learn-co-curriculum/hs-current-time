@@ -13,3 +13,4 @@ Build Out a Simple Sinatra application that displays the current time.
 ## Resources
 
 [strftime](http://apidock.com/ruby/Time/strftime)
+<a href='https://learn.co/lessons/hs-current-time' data-visibility='hidden'>View this lesson on Learn.co</a>
